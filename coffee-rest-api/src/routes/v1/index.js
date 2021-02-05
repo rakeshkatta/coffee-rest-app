@@ -7,7 +7,7 @@ const router = express.Router();
 
 const products = require('./products');
 const discounts = require('./discounts');
-const order = require('./discounts');
+const order = require('./order');
 
 router.use('/products', products);
 router.use('/discounts', discounts);
