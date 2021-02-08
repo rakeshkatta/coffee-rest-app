@@ -1,14 +1,5 @@
-const debug = require('debug')('app:services:v1:index');
-const { orderData } = require('../../mock-data');
+const calculateTotalPrice = products => products.reduce((sum, item) => sum + item.price, 0);
 
-
-const OrderService = {
-
-  getOrderDetails: () => {
-    debug('executing products method');
-    return Promise.resolve(orderData);
-  },
-
+module.exports = {
+  calculateTotalPrice,
 };
-
-module.exports = OrderService;
